@@ -22,22 +22,22 @@ const Home = () => {
       </Helmet>
 
       <Navbar8
-        // page1={<span>Home</span>}
-        // page2={<span>About Us</span>}
-        // page3={<span>Services</span>}
-        // page4={<span>Contact</span>}
-        // link1={<span>home</span>}
-        // link2={<span>about</span>}
-        // link3={<span>services</span>}
-        // link4={<span>contact</span>}
-        // // page1Description={<span>Welcome to AI for Women Entrepreneurs</span>}
-        // page2Description={<span>Learn more about our mission and team</span>}
-        // page3Description={<span>Explore the AI services we offer</span>}
-        // page4Description={
-        //   <span>Get in touch with us for collaborations and inquiries</span>
-        // }
-        // action1={<span>Sign Up</span>}
-        // action2={<span>Learn More</span>}
+        page1={<span>Home</span>}
+        page2={<span>About Us</span>}
+        page3={<span>Services</span>}
+        page4={<span>Contact</span>}
+        link1={<span>home</span>}
+        link2={<span>about</span>}
+        link3={<span>services</span>}
+        link4={<span>Services</span>}
+        // page1Description={<span>Welcome to AI for Women Entrepreneurs</span>}
+        page2Description={<span>Learn more about our mission and team</span>}
+        page3Description={<span>Explore the AI services we offer</span>}
+        page4Description={
+          <span>Get in touch with us for collaborations and inquiries</span>
+        }
+        action1={<span>Sign Up</span>}
+        action2={<span>Learn More</span>}
       />
 
       <Hero17
@@ -119,7 +119,7 @@ const Home = () => {
         }
       />
 
-      <Testimonial17
+      {/* <Testimonial17
         heading1={<span>Testimonials</span>}
         content1={<span>What our clients say about us</span>}
         author1Name={<span>Sara Johnson</span>}
@@ -137,7 +137,7 @@ const Home = () => {
             The tools and resources offered have helped us streamline operations.
           </span>
         }
-      />
+      /> */}
 
       <Footer4
         link1={<span>About Us</span>}

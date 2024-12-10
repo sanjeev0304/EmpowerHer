@@ -85,7 +85,7 @@ const Navbar8 = (props) => {
                 )}
               </span>
             </button>
-            <button className="navbar8-action21 thq-button-outline thq-button-animated">
+            {/* <button className="navbar8-action21 thq-button-outline thq-button-animated">
               <span>
                 {props.action2 ?? (
                   <Fragment>
@@ -93,7 +93,7 @@ const Navbar8 = (props) => {
                   </Fragment>
                 )}
               </span>
-            </button>
+            </button> */}
           </div>
         </div>
         <div data-thq="thq-burger-menu" className="navbar8-burger-menu">
@@ -133,28 +133,28 @@ const Navbar8 = (props) => {
                   </Fragment>
                 )}
               </a>
-              <a
+              {/* <a
                 href={props.link3Url}
                 className="navbar8-link32 thq-link thq-body-small"
               >
                 {props.link3 ?? (
                   <Fragment>
-                    <span className="navbar8-text24">#services</span>
+                    <span className="navbar8-text24">#contact</span>
                   </Fragment>
                 )}
-              </a>
+              </a> */}
               <div className="navbar8-link4-accordion">
                 <div
                   onClick={() => setLink5AccordionOpen(!link5AccordionOpen)}
                   className="navbar8-trigger"
                 >
-                  <span className="thq-link thq-body-small">
+                  {/* <span className="thq-link thq-body-small">
                     {props.link4 ?? (
                       <Fragment>
-                        <span className="navbar8-text21">#contact</span>
+                        <span className="navbar8-text21">#Services</span>
                       </Fragment>
                     )}
-                  </span>
+                  </span> */}
                   <div className="navbar8-icon-container2">
                     {link5AccordionOpen && (
                       <div className="navbar8-container4">
