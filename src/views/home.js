@@ -22,22 +22,20 @@ const Home = () => {
       </Helmet>
 
       <Navbar8
-        page1={<span>Home</span>}
-        page2={<span>About Us</span>}
-        page3={<span>Services</span>}
-        page4={<span>Contact</span>}
-        link1={<span>home</span>}
-        link2={<span>about</span>}
-        link3={<span>services</span>}
+        page1={<span>Business Plan Generartor</span>}
+        page2={<span>Market Analysis</span>}
+        // page3={<span>Services</span>}
+        // page4={<span>Contact</span>}
+        link1={<span>Home</span>}
+        link2={<span>About</span>}
         link4={<span>Services</span>}
-        // page1Description={<span>Welcome to AI for Women Entrepreneurs</span>}
-        page2Description={<span>Learn more about our mission and team</span>}
-        page3Description={<span>Explore the AI services we offer</span>}
-        page4Description={
-          <span>Get in touch with us for collaborations and inquiries</span>
-        }
+        page1Description={<span>Get Your Business ideas and plans instantly</span>}
+        page2Description={<span>Understand about your market and its trends</span>}
+        // page3Description={<span>Explore the AI services we offer</span>}
+        // page4Description={
+        //   <span>Get in touch with us for collaborations and inquiries</span>
+        // }
         action1={<span>Sign Up</span>}
-        action2={<span>Learn More</span>}
       />
 
       <Hero17

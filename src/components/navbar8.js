@@ -34,7 +34,7 @@ const Navbar8 = (props) => {
                 </Fragment>
               )}
             </a>
-            <a
+            {/* <a
               href={props.link3Url}
               target="_blank"
               rel="noreferrer noopener"
@@ -45,7 +45,7 @@ const Navbar8 = (props) => {
                   <span className="navbar8-text24">#services</span>
                 </Fragment>
               )}
-            </a>
+            </a> */}
             <div
               onClick={() => setLink5DropdownVisible(!link5DropdownVisible)}
               className="navbar8-link4-dropdown-trigger"
@@ -185,7 +185,7 @@ const Navbar8 = (props) => {
                           <span className="navbar8-page11 thq-body-large">
                             {props.page1 ?? (
                               <Fragment>
-                                <span className="navbar8-text17">Home</span>
+                                <span className="navbar8-text17">Business Plan Generartor</span>
                               </Fragment>
                             )}
                           </span>
