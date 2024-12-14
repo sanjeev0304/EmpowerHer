@@ -96,14 +96,9 @@ function Navbar() {
       { label: "Multilingual Translation", link: "/MultilingualTranslation" },
     ],
     learning: [
-      { label: "Video Tutorials", link: "/VideoTutorials" },
-      { label: "Industry Guides", link: "/IndustryGuides" },
-      { label: "Funding Resources", link: "/FundingResources" },
-    ],
-    community: [
-      { label: "Mentor Matching", link: "/MentorMatching" },
-      { label: "Peer Networking", link: "/PeerNetworking" },
-      { label: "Success Stories", link: "/SuccessStories" },
+      { label: "Sucess Stories", link: "/SucessStories" },
+      { label: "Learning", link: "/Learning" },
+      { label: "Government Schemes", link: "/GovernmentSchemes" },
     ],
     tools: [
       { label: "Financial Calculator", link: "/FinancialCalculator" },
@@ -113,11 +108,11 @@ function Navbar() {
   };
 
   const navbarStyle = {
-    backgroundColor: "white",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    backgroundColor: "rgba(232, 105, 105, 0.1)",
+    boxShadow: "0 2px 4px rgba(232, 105, 105, 0.1)",
     width: "100%",
-    position: "fixed",
-    top: 40,
+    position: "relative",
+    top: 47,
     left: 0,
     zIndex: 1000,
 
