@@ -96,7 +96,7 @@ function Navbar() {
       { label: "Multilingual Translation", link: "/MultilingualTranslation" },
     ],
     learning: [
-      { label: "Sucess Stories", link: "/SucessStories" },
+      { label: "Sucess Stories", link: "/Stories" },
       { label: "Learning", link: "/Learning" },
       { label: "Government Schemes", link: "/GovernmentSchemes" },
     ],
