@@ -1,3 +1,5 @@
+
+
 :root {
   --dl-size-size-large: 144px;
   --dl-size-size-small: 48px;
@@ -345,6 +347,7 @@
   background-position: 100%;
   -webkit-text-fill-color: transparent;
 }
+
 .thq-link:hover {
   background-position: 0 100%;
 }
@@ -557,3 +560,4 @@
     grid-template-columns: 1fr;
   }
 }
+

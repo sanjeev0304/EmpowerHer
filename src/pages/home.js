@@ -2,14 +2,13 @@
 import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 
-import Navbar8 from '../components/navbar8';
-import Hero17 from '../components/hero17';
-import Features24 from '../components/features24';
-import CTA26 from '../components/cta26';
-import Features25 from '../components/features25';
-import Steps2 from '../components/steps2';
-import Testimonial17 from '../components/testimonial17';
-import Footer4 from '../components/footer4';
+import Navbar8 from '../components/Home/navbar8';
+import Hero17 from '../components/Home/hero17';
+import Features24 from '../components/Home/features24';
+import CTA26 from '../components/Home/cta26';
+import Features25 from '../components/Home/features25';
+import Steps2 from '../components/Home/steps2';
+import Footer4 from '../components/Home/footer4';
 
 import './home.css';
 
@@ -17,7 +16,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <Helmet>
-        <title>Trusty Passionate Narwhal</title>
+        <title>EmpowerHer</title>
         <meta property="og:title" content="Trusty Passionate Narwhal" />
       </Helmet>
 
@@ -117,25 +116,7 @@ const Home = () => {
         }
       />
 
-      {/* <Testimonial17
-        heading1={<span>Testimonials</span>}
-        content1={<span>What our clients say about us</span>}
-        author1Name={<span>Sara Johnson</span>}
-        author1Position={<span>Founder & CEO, TechSavvy Solutions</span>}
-        review1={
-          <span>
-            AI for Women Entrepreneurs has transformed the way we approach
-            business.
-          </span>
-        }
-        author2Name={<span>Emily Chen</span>}
-        author2Position={<span>Co-founder, InnovateHer Labs</span>}
-        review2={
-          <span>
-            The tools and resources offered have helped us streamline operations.
-          </span>
-        }
-      /> */}
+     
 
       <Footer4
         link1={<span>About Us</span>}

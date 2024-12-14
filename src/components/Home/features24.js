@@ -3,6 +3,7 @@ import React, { useState, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import './features24.css'
+import image13 from '../images/13.jpg';
 
 const Features24 = (props) => {
   const [activeTab, setActiveTab] = useState(0)
@@ -130,9 +131,9 @@ Features24.defaultProps = {
   feature3Description: undefined,
   feature3Title: undefined,
   feature3ImgSrc:
-    'https://images.unsplash.com/photo-1699602048455-70d1d397e0ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczMzE5NjMwNHw&ixlib=rb-4.0.3&q=80&w=1080',
+    image13,
   feature1ImgSrc:
-    'https://images.unsplash.com/photo-1553484771-11998c592b9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczMzE5NjMwNXw&ixlib=rb-4.0.3&q=80&w=1080',
+    image13,
   feature2Description: undefined,
   feature1Title: undefined,
   feature3ImgAlt: 'AI for Women Entrepreneurs Feature 3 Image',
