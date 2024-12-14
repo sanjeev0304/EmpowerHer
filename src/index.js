@@ -1,26 +1,31 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from 'react-router-dom'
+import React,{useEffect} from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import './style.css'
-import Home from './views/home'
-import NotFound from './views/not-found'
+import './style.css';
+import Home from './pages/home';
 
 const App = () => {
+  useEffect(() => {
+    const translateElement = document.getElementById('google_translate_element');
+    if (translateElement && window.google && window.google.translate) {
+      new window.google.translate.TranslateElement(
+        { pageLanguage: 'en', layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE },
+        'google_translate_element'
+      );
+    }
+  }, []);
+  
   return (
-    <Router>
-      <Switch>
-        <Route component={Home} exact path="/" />
-        <Route component={NotFound} path="**" />
-        <Redirect to="**" />
-      </Switch>
-    </Router>
-  )
-}
+    <>
+      
+      <Router>
+        <Switch>
+          <Route component={Home} exact path="/" />
+        </Switch>
+      </Router>
+    </>
+  );
+};
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'));

@@ -4,14 +4,16 @@
   height: auto;
   display: flex;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
   align-items: center;
   flex-shrink: 0;
   flex-direction: column;
+ padding-top: 90px;
 }
 .hero17-column {
   gap: var(--dl-space-space-oneandhalfunits);
-  width: auto;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -29,11 +31,13 @@
 }
 .hero17-text2 {
   text-align: center;
+  font-size: 1.2rem;
 }
 .hero17-actions {
   gap: var(--dl-space-space-unit);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding-top: var(--dl-space-space-unit);
 }
 .hero17-content2 {
