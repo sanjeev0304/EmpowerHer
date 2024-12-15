@@ -42,11 +42,14 @@
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <style>
       #google_translate_element {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-     
-      }
+  position: fixed; /* Stays in the top-left corner even when scrolling */
+  top: 0; /* Aligns with the top of the viewport */
+  left: 0; /* Aligns with the left of the viewport */
+  z-index: 1100; /* Ensures it's above other elements like the navbar */
+  padding: 10px; /* Optional: Adds some padding for spacing */
+ 
+}
+
     </style>
     
     
