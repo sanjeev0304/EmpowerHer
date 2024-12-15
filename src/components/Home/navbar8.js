@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
 import logo from "../images/logo1.png";
+import { useHistory } from "react-router-dom";
 
-function Navbar() {
+const  Navbar = () => {
+  const history = useHistory();
+
+  const handleNavigateToSignUp = () => {
+    history.push("/Signup"); // Navigate to the sign-up page
+  };
+
   const [isDropdownOpen, setIsDropdownOpen] = useState({
     aiTools: false,
     learning: false,
     community: false,
-    tools: false
+    tools: false,
   });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,14 +25,14 @@ function Navbar() {
       setIsMobile(window.innerWidth <= 768);
     };
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const toggleDropdown = (dropdownType) => {
-    setIsDropdownOpen(prev => ({
+    setIsDropdownOpen((prev) => ({
       ...Object.keys(prev).reduce((acc, key) => ({ ...acc, [key]: false }), {}),
-      [dropdownType]: !prev[dropdownType]
+      [dropdownType]: !prev[dropdownType],
     }));
   };
 
@@ -41,7 +48,6 @@ function Navbar() {
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
           width: "300px", // Fixed width for uniformity
           zIndex: 10,
-          
         }}
       >
         <ul
@@ -84,10 +90,6 @@ function Navbar() {
         </ul>
       </div>
     );
-  
-  
-  
-  
 
   const menuItems = {
     aiTools: [
@@ -124,7 +126,7 @@ function Navbar() {
     padding: "0", // Remove extra padding
     boxSizing: "border-box", // Ensure padding doesn't overflow
   };
-  
+
   const containerStyle = {
     display: "flex",
     justifyContent: "space-between",
@@ -134,24 +136,19 @@ function Navbar() {
     width: "100%", // Make container fill the navbar
     boxSizing: "border-box",
   };
-  
 
   const hoverStyle = {
     backgroundColor: "#F5D1B0", // Darker background on hover
     boxShadow: "0 4px 8px rgba(232, 105, 105, 0.2)", // Stronger shadow on hover
   };
-  
-  const logoStyle = {
-   
-  };
+
+  const logoStyle = {};
 
   const logoImageStyle = {
     width: "150px",
-    height:"150px",
+    height: "150px",
     marginLeft: "120px",
   };
-
-  
 
   const desktopMenuStyle = {
     display: isMobile ? "none" : "flex",
@@ -234,18 +231,14 @@ function Navbar() {
   };
 
   return (
-    <div style={isHovered ? { ...navbarStyle, ...hoverStyle } : navbarStyle}
+    <div
+      style={isHovered ? { ...navbarStyle, ...hoverStyle } : navbarStyle}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}>
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div style={containerStyle}>
         <a href="/Home" title="PolyFile" style={logoStyle}>
-          <img
-            loading="lazy"
-            src= {logo}
-            style={logoImageStyle
-            }
-          />
-          
+          <img loading="lazy" src={logo} style={logoImageStyle} />
         </a>
 
         <div style={desktopMenuStyle}>
@@ -264,15 +257,24 @@ function Navbar() {
           </ul>
           <div style={{ marginLeft: "1rem" }}>
             {!isLoggedIn ? (
-              <button style={authButtonStyle} onClick={() => console.log('Redirect to Register/Login page')}>
-                Register/Login
-              </button>
+              <button
+              style={{ ...authButtonStyle }}
+              onClick={handleNavigateToSignUp}
+            >
+              Register/Login
+            </button>
             ) : (
               <>
-                <button style={authButtonStyle} onClick={() => console.log('Redirect to Dashboard')}>
+                <button
+                  style={authButtonStyle}
+                  onClick={() => console.log("Redirect to Dashboard")}
+                >
                   Dashboard
                 </button>
-                <button style={{...authButtonStyle, marginLeft: "0.5rem"}} onClick={() => console.log('Logging out')}>
+                <button
+                  style={{ ...authButtonStyle, marginLeft: "0.5rem" }}
+                  onClick={() => console.log("Logging out")}
+                >
                   Logout
                 </button>
               </>
@@ -281,7 +283,10 @@ function Navbar() {
         </div>
 
         <div style={mobileMenuStyle}>
-          <button style={mobileMenuToggleStyle} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button
+            style={mobileMenuToggleStyle}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
             ☰
           </button>
           {isMobileMenuOpen && (
@@ -291,7 +296,12 @@ function Navbar() {
                   <li key={key} style={mobileMenuItemStyle}>
                     <button
                       onClick={() => toggleDropdown(key)}
-                      style={{...menuButtonStyle, width: "100%", textAlign: "left", padding: "0.5rem 0"}}
+                      style={{
+                        ...menuButtonStyle,
+                        width: "100%",
+                        textAlign: "left",
+                        padding: "0.5rem 0",
+                      }}
                     >
                       {key.charAt(0).toUpperCase() + key.slice(1)}
                     </button>
@@ -299,11 +309,16 @@ function Navbar() {
                       <ul style={mobileSubmenuStyle}>
                         {items.map((item, index) => (
                           <li key={index} style={mobileSubmenuItemStyle}>
-                            <a href={item.link} style={{
-                              textDecoration: "none",
-                              color: "black",
-                              fontSize: "16px",
-                            }}>{item.label}</a>
+                            <a
+                              href={item.link}
+                              style={{
+                                textDecoration: "none",
+                                color: "black",
+                                fontSize: "16px",
+                              }}
+                            >
+                              {item.label}
+                            </a>
                           </li>
                         ))}
                       </ul>
@@ -313,15 +328,28 @@ function Navbar() {
               </ul>
               <div style={{ marginTop: "1rem" }}>
                 {!isLoggedIn ? (
-                  <button style={{...authButtonStyle, width: "100%"}} onClick={() => console.log('Redirect to Register/Login page')}>
-                    Register/Login
-                  </button>
+                  <button
+                  style={{ ...authButtonStyle, width: "100%" }}
+                  onClick={handleNavigateToSignUp}
+                >
+                  Register/Login
+                </button>
                 ) : (
                   <>
-                    <button style={{...authButtonStyle, width: "100%", marginBottom: "0.5rem"}} onClick={() => console.log('Redirect to Dashboard')}>
+                    <button
+                      style={{
+                        ...authButtonStyle,
+                        width: "100%",
+                        marginBottom: "0.5rem",
+                      }}
+                      onClick={() => console.log("Redirect to Dashboard")}
+                    >
                       Dashboard
                     </button>
-                    <button style={{...authButtonStyle, width: "100%"}} onClick={() => console.log('Logging out')}>
+                    <button
+                      style={{ ...authButtonStyle, width: "100%" }}
+                      onClick={() => console.log("Logging out")}
+                    >
                       Logout
                     </button>
                   </>
@@ -336,4 +364,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
