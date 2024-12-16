@@ -11,11 +11,11 @@ function Stories(){
     return(
         <>
        <Navbar />
-       <Card 
+       {/* <Card 
         name ={users[0].name}
         story ={users[0].story}
         image ={users[0].image}
-       />
+       /> */}
         </>
 
     )
