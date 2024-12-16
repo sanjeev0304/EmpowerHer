@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from "../images/logo1.png";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState({
@@ -10,6 +11,7 @@ function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -108,43 +110,48 @@ function Navbar() {
   };
 
   const navbarStyle = {
-    backgroundColor: "rgba(232, 105, 105, 0.1)",
+    backgroundColor: "#F5D1B0",
     boxShadow: "0 2px 4px rgba(232, 105, 105, 0.1)",
     width: "100%",
-    position: "relative",
-    top: 47,
+    position: "fixed",
+    top: 0,
     left: 0,
     zIndex: 1000,
-
-    
+    height: "100px",
+    display: "flex", // Flexbox for navbar layout
+    justifyContent: "center", // Center container horizontally
+    alignItems: "center", // Center items vertically
+    padding: "0", // Remove extra padding
+    boxSizing: "border-box", // Ensure padding doesn't overflow
   };
-
+  
   const containerStyle = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "1rem",
-    maxWidth: "1200px",
-    margin: "0 auto",
+    padding: "0 1rem", // Horizontal padding for spacing
+    maxWidth: "1200px", // Constrain the container width
+    width: "100%", // Make container fill the navbar
+    boxSizing: "border-box",
   };
+  
 
+  const hoverStyle = {
+    backgroundColor: "#F5D1B0", // Darker background on hover
+    boxShadow: "0 4px 8px rgba(232, 105, 105, 0.2)", // Stronger shadow on hover
+  };
+  
   const logoStyle = {
-    display: "flex",
-    alignItems: "center",
-    textDecoration: "none",
+   
   };
 
   const logoImageStyle = {
-    width: "80px",
-    marginRight: "10px",
+    width: "150px",
+    height:"150px",
+    marginLeft: "120px",
   };
 
-  const logoTextStyle = {
-    fontSize: "27px",
-    // fontWeight: "bold",
-    fontFamily: "Sans-serif",
-    color: "black",
-  };
+  
 
   const desktopMenuStyle = {
     display: isMobile ? "none" : "flex",
@@ -227,16 +234,18 @@ function Navbar() {
   };
 
   return (
-    <div style={navbarStyle}>
+    <div style={isHovered ? { ...navbarStyle, ...hoverStyle } : navbarStyle}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}>
       <div style={containerStyle}>
         <a href="/Home" title="PolyFile" style={logoStyle}>
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/22f8d890c18bf5c16d6918bdd45acbf15a748688ba0804a0fa8082349d5c8f2f?placeholderIfAbsent=true&apiKey=b649485253dc47298996013798279fca"
-            alt="EmpowerHer"
-            style={logoImageStyle}
+            src= {logo}
+            style={logoImageStyle
+            }
           />
-          <h1 style={logoTextStyle}>EmpowerHer</h1>
+          
         </a>
 
         <div style={desktopMenuStyle}>
