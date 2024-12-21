@@ -30,7 +30,7 @@
   align-items: flex-start;
 }
 .steps2-container3 {
-  grid-area: span 1/span 1/span 1/span 1;
+  grid-area: span 1 / span 1 / span 1 / span 1;
 }
 .steps2-container4 {
   top: 10%;
@@ -127,12 +127,12 @@
 .steps2-text32 {
   display: inline-block;
 }
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .steps2-max-width {
     flex-direction: column;
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .steps2-section-header {
     position: static;
     margin-bottom: var(--dl-space-space-twounits);
@@ -154,7 +154,7 @@
     width: 100%;
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .steps2-button {
     width: 100%;
   }

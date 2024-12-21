@@ -24,7 +24,7 @@ const Home = () => {
         page1={<span>Business Plan Generartor</span>}
         page2={<span>Market Analysis</span>}
         // page3={<span>Services</span>}
-        // page4={<span>Contact</span>}
+        // page4={<span>Contact</span>}F
         link1={<span>Home</span>}
         link2={<span>About</span>}
         link4={<span>Services</span>}

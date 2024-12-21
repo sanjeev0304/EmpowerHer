@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import './cta26.css'
+import "./cta26.css";
 
 const CTA26 = (props) => {
   return (
@@ -51,19 +51,19 @@ const CTA26 = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 CTA26.defaultProps = {
   heading1: undefined,
   content1: undefined,
   action1: undefined,
-}
+};
 
 CTA26.propTypes = {
   heading1: PropTypes.element,
   content1: PropTypes.element,
   action1: PropTypes.element,
-}
+};
 
-export default CTA26
+export default CTA26;

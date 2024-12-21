@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import './footer4.css'
+import "./footer4.css";
 
 const Footer4 = (props) => {
   return (
@@ -112,8 +112,8 @@ const Footer4 = (props) => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 Footer4.defaultProps = {
   link5: undefined,
@@ -122,11 +122,11 @@ Footer4.defaultProps = {
   termsLink: undefined,
   link2: undefined,
   link4: undefined,
-  logoAlt: 'AI for Women Entrepreneurs',
+  logoAlt: "AI for Women Entrepreneurs",
   cookiesLink: undefined,
-  logoSrc: 'https://presentation-website-assets.teleporthq.io/logos/logo.png',
+  logoSrc: "https://presentation-website-assets.teleporthq.io/logos/logo.png",
   privacyLink: undefined,
-}
+};
 
 Footer4.propTypes = {
   link5: PropTypes.element,
@@ -139,6 +139,6 @@ Footer4.propTypes = {
   cookiesLink: PropTypes.element,
   logoSrc: PropTypes.string,
   privacyLink: PropTypes.element,
-}
+};
 
-export default Footer4
+export default Footer4;

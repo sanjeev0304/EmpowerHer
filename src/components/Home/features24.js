@@ -1,12 +1,12 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, Fragment } from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import './features24.css'
-import image13 from '../images/13.jpg';
+import "./features24.css";
+import image13 from "../images/13.jpg";
 
 const Features24 = (props) => {
-  const [activeTab, setActiveTab] = useState(0)
+  const [activeTab, setActiveTab] = useState(0);
   return (
     <div className="thq-section-padding">
       <div className="features24-container2 thq-section-max-width">
@@ -123,26 +123,24 @@ const Features24 = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Features24.defaultProps = {
-  feature1ImgAlt: 'AI for Women Entrepreneurs Feature 1 Image',
+  feature1ImgAlt: "AI for Women Entrepreneurs Feature 1 Image",
   feature3Description: undefined,
   feature3Title: undefined,
-  feature3ImgSrc:
-    image13,
-  feature1ImgSrc:
-    image13,
+  feature3ImgSrc: image13,
+  feature1ImgSrc: image13,
   feature2Description: undefined,
   feature1Title: undefined,
-  feature3ImgAlt: 'AI for Women Entrepreneurs Feature 3 Image',
+  feature3ImgAlt: "AI for Women Entrepreneurs Feature 3 Image",
   feature1Description: undefined,
   feature2ImgSrc:
-    'https://images.unsplash.com/photo-1646688829907-1694d43b103a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczMzE5NjMwNXw&ixlib=rb-4.0.3&q=80&w=1080',
-  feature2ImgAlt: 'AI for Women Entrepreneurs Feature 2 Image',
+    "https://images.unsplash.com/photo-1646688829907-1694d43b103a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczMzE5NjMwNXw&ixlib=rb-4.0.3&q=80&w=1080",
+  feature2ImgAlt: "AI for Women Entrepreneurs Feature 2 Image",
   feature2Title: undefined,
-}
+};
 
 Features24.propTypes = {
   feature1ImgAlt: PropTypes.string,
@@ -157,6 +155,6 @@ Features24.propTypes = {
   feature2ImgSrc: PropTypes.string,
   feature2ImgAlt: PropTypes.string,
   feature2Title: PropTypes.element,
-}
+};
 
-export default Features24
+export default Features24;

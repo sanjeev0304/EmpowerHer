@@ -1,11 +1,11 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, Fragment } from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import './features25.css'
+import "./features25.css";
 
 const Features25 = (props) => {
-  const [activeTab, setActiveTab] = useState(0)
+  const [activeTab, setActiveTab] = useState(0);
   return (
     <div className="thq-section-padding">
       <div className="features25-container2 thq-section-max-width">
@@ -123,26 +123,26 @@ const Features25 = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Features25.defaultProps = {
   feature3Description: undefined,
-  feature1ImgAlt: 'AI-Powered Business Insights Image Alt Text',
+  feature1ImgAlt: "AI-Powered Business Insights Image Alt Text",
   feature1Description: undefined,
-  feature3ImgAlt: 'Efficient Customer Support Image Alt Text',
+  feature3ImgAlt: "Efficient Customer Support Image Alt Text",
   feature2Title: undefined,
   feature1Title: undefined,
   feature1ImgSrc:
-    'https://images.unsplash.com/photo-1516383274235-5f42d6c6426d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczMzE5NjMwNXw&ixlib=rb-4.0.3&q=80&w=1080',
+    "https://images.unsplash.com/photo-1516383274235-5f42d6c6426d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczMzE5NjMwNXw&ixlib=rb-4.0.3&q=80&w=1080",
   feature3ImgSrc:
-    'https://images.unsplash.com/photo-1521510895919-46920266ddb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczMzE5NjMwNXw&ixlib=rb-4.0.3&q=80&w=1080',
+    "https://images.unsplash.com/photo-1521510895919-46920266ddb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczMzE5NjMwNXw&ixlib=rb-4.0.3&q=80&w=1080",
   feature2Description: undefined,
   feature3Title: undefined,
-  feature2ImgAlt: 'Personalized Marketing Strategies Image Alt Text',
+  feature2ImgAlt: "Personalized Marketing Strategies Image Alt Text",
   feature2ImgSrc:
-    'https://images.unsplash.com/photo-1724166595400-fdfcdb29685e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczMzE5NjMwNnw&ixlib=rb-4.0.3&q=80&w=1080',
-}
+    "https://images.unsplash.com/photo-1724166595400-fdfcdb29685e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczMzE5NjMwNnw&ixlib=rb-4.0.3&q=80&w=1080",
+};
 
 Features25.propTypes = {
   feature3Description: PropTypes.element,
@@ -157,6 +157,6 @@ Features25.propTypes = {
   feature3Title: PropTypes.element,
   feature2ImgAlt: PropTypes.string,
   feature2ImgSrc: PropTypes.string,
-}
+};
 
-export default Features25
+export default Features25;
