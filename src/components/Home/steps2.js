@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import './steps2.css'
+import "./steps2.css";
 
 const Steps2 = (props) => {
   return (
@@ -115,8 +115,8 @@ const Steps2 = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Steps2.defaultProps = {
   step1Description: undefined,
@@ -127,7 +127,7 @@ Steps2.defaultProps = {
   step3Title: undefined,
   step4Description: undefined,
   step4Title: undefined,
-}
+};
 
 Steps2.propTypes = {
   step1Description: PropTypes.element,
@@ -138,6 +138,6 @@ Steps2.propTypes = {
   step3Title: PropTypes.element,
   step4Description: PropTypes.element,
   step4Title: PropTypes.element,
-}
+};
 
-export default Steps2
+export default Steps2;

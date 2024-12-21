@@ -150,7 +150,7 @@
 .features25-text6 {
   display: inline-block;
 }
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .features25-container2 {
     grid-gap: var(--dl-space-space-twounits);
     grid-template-columns: 1fr;

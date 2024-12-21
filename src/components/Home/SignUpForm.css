@@ -193,7 +193,7 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: 6;
+  /* z-index: 6; */
   width: 100%;
 }
 
@@ -254,7 +254,7 @@
   transform: translate(35%, 0);
   background-image: linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   transition: 1s ease-in-out;
-  z-index: 6;
+  /* z-index: 6; */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-bottom-right-radius: max(50vw, 50vh);
   border-top-left-radius: max(50vw, 50vh);

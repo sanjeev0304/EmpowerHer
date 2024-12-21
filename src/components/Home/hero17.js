@@ -1,21 +1,21 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-import Script from 'dangerous-html/react'
-import PropTypes from 'prop-types'
-import image1 from '../images/1.jpg';
-import image2 from '../images/2.jpg';
-import image3 from '../images/3.jpg';
-import image4 from '../images/4.jpg';
-import image5 from '../images/5.jpg';
-import image6 from '../images/6.jpg';
-import image7 from '../images/7.jpg';
-import image8 from '../images/8.jpg';
-import image9 from '../images/9.jpg';
-import image10 from '../images/10.jpg';
-import image11 from '../images/11.jpg';
-import image12 from '../images/12.jpg';
+import Script from "dangerous-html/react";
+import PropTypes from "prop-types";
+import image1 from "../images/1.jpg";
+import image2 from "../images/2.jpg";
+import image3 from "../images/3.jpg";
+import image4 from "../images/4.jpg";
+import image5 from "../images/5.jpg";
+import image6 from "../images/6.jpg";
+import image7 from "../images/7.jpg";
+import image8 from "../images/8.jpg";
+import image9 from "../images/9.jpg";
+import image10 from "../images/10.jpg";
+import image11 from "../images/11.jpg";
+import image12 from "../images/12.jpg";
 
-import './hero17.css'
+import "./hero17.css";
 
 const Hero17 = (props) => {
   return (
@@ -53,7 +53,6 @@ const Hero17 = (props) => {
               )}
             </span>
           </button>
-         
         </div>
       </div>
       <div class="hero17-content2">
@@ -184,7 +183,7 @@ const Hero17 = (props) => {
             />
             <img
               alt="Hero Image"
-              src= {image1}
+              src={image1}
               class="hero17-placeholder-image33 thq-img-scale thq-img-ratio-1-1"
             />
           </div>
@@ -217,8 +216,8 @@ const Hero17 = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Hero17.defaultProps = {
   image1Src: image1, // Use the imported image variable directly
@@ -233,24 +232,23 @@ Hero17.defaultProps = {
   image10Src: image10,
   image11Src: image11,
   image12Src: image12,
-  image1Alt: 'AI for Women Entrepreneurs',
-  image2Alt: 'AI for Women Entrepreneurs',
-  image3Alt: 'AI for Women Entrepreneurs',
-  image4Alt: 'AI for Women Entrepreneurs',
-  image5Alt: 'AI for Women Entrepreneurs',
-  image6Alt: 'AI for Women Entrepreneurs',
-  image7Alt: 'AI for Women Entrepreneurs',
-  image8Alt: 'AI for Women Entrepreneurs',
-  image9Alt: 'AI for Women Entrepreneurs',
-  image10Alt: 'AI for Women Entrepreneurs',
-  image11Alt: 'AI for Women Entrepreneurs',
-  image12Alt: 'AI for Women Entrepreneurs',
+  image1Alt: "AI for Women Entrepreneurs",
+  image2Alt: "AI for Women Entrepreneurs",
+  image3Alt: "AI for Women Entrepreneurs",
+  image4Alt: "AI for Women Entrepreneurs",
+  image5Alt: "AI for Women Entrepreneurs",
+  image6Alt: "AI for Women Entrepreneurs",
+  image7Alt: "AI for Women Entrepreneurs",
+  image8Alt: "AI for Women Entrepreneurs",
+  image9Alt: "AI for Women Entrepreneurs",
+  image10Alt: "AI for Women Entrepreneurs",
+  image11Alt: "AI for Women Entrepreneurs",
+  image12Alt: "AI for Women Entrepreneurs",
   heading1: undefined,
   content1: undefined,
   action1: undefined,
   action2: undefined,
 };
-
 
 Hero17.propTypes = {
   image3Src: PropTypes.string,
@@ -281,6 +279,6 @@ Hero17.propTypes = {
   image10Src: PropTypes.string,
   image9Alt: PropTypes.string,
   image1Src: PropTypes.string,
-}
+};
 
-export default Hero17
+export default Hero17;

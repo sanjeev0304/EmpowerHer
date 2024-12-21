@@ -87,7 +87,7 @@
 .footer4-text21 {
   display: inline-block;
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .footer4-row {
     gap: var(--dl-space-space-oneandhalfunits);
     align-items: center;
@@ -95,7 +95,7 @@
     justify-content: center;
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .footer4-max-width {
     gap: var(--dl-space-space-oneandhalfunits);
   }

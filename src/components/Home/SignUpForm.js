@@ -3,96 +3,94 @@ import "./SignUpForm.css"; // Add your styles here or use inline styles.
 import { useHistory } from "react-router-dom";
 
 const AuthForm = () => {
-
   const history = useHistory();
 
   const API_URL = process.env.REACT_APP_API_URL;
   const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-});
+    username: "",
+    email: "",
+    password: "",
+  });
 
-const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
-// Handle input changes
-const handleChange = (e) => {
+  // Handle input changes
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-};
+  };
 
-const handleSubmit = async (e) => {
-  e.preventDefault(); // Prevent page reload
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent page reload
 
-  try {
+    try {
       const response = await fetch(`${API_URL}/api/users/register`, {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-          
-     });
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       if (response.ok) {
-          const data = await response.json();
-          setMessage('Registration successful!');
-          console.log('Response:', data);
+        const data = await response.json();
+        setMessage("Registration successful!");
+        console.log("Response:", data);
 
-          history.push("/");
+        history.push("/");
       } else {
-          const error = await response.json();
-          setMessage(`Error: ${error.message}`);
-          console.error('Error:', error);
+        const error = await response.json();
+        setMessage(`Error: ${error.message}`);
+        console.error("Error:", error);
       }
-  } catch (error) {
-      setMessage('Network error occurred.');
+    } catch (error) {
+      setMessage("Network error occurred.");
       console.log(JSON.stringify(formData));
-      console.error('Network error:', error);
-  }
-};
+      console.error("Network error:", error);
+    }
+  };
 
-const [formDataSignIn, setFormDataSignIn] = useState({
-  email: '',
-  password: '',
-});
+  const [formDataSignIn, setFormDataSignIn] = useState({
+    email: "",
+    password: "",
+  });
 
-const [messageSignIn, setMessageSignIn] = useState('');
+  const [messageSignIn, setMessageSignIn] = useState("");
 
-// Handle input changes
-const handleChangeSignIn = (e) => {
-  const { name, value } = e.target;
-  setFormDataSignIn({ ...formDataSignIn, [name]: value });
-};
+  // Handle input changes
+  const handleChangeSignIn = (e) => {
+    const { name, value } = e.target;
+    setFormDataSignIn({ ...formDataSignIn, [name]: value });
+  };
 
-const handleSubmitSignIn = async (e) => {
-e.preventDefault(); // Prevent page reload
+  const handleSubmitSignIn = async (e) => {
+    e.preventDefault(); // Prevent page reload
 
-try {
-    const response = await fetch(`${API_URL}/api/users/login`, {
-        method: 'POST',
+    try {
+      const response = await fetch(`${API_URL}/api/users/login`, {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formDataSignIn),
-    });
+      });
 
-    if (response.ok) {
+      if (response.ok) {
         const data = await response.json();
-        setMessageSignIn('Login successful!');
-        console.log('Response:', data);
+        setMessageSignIn("Login successful!");
+        console.log("Response:", data);
         history.push("/");
-    } else {
+      } else {
         const error = await response.json();
         setMessageSignIn(`Error: ${error.message}`);
-        console.error('Error:', error);
+        console.error("Error:", error);
+      }
+    } catch (error) {
+      setMessageSignIn("Network error occurred.");
+      console.log(JSON.stringify(formDataSignIn));
+      console.error("Network error:", error);
     }
-} catch (error) {
-    setMessageSignIn('Network error occurred.');
-    console.log(JSON.stringify(formDataSignIn));
-    console.error('Network error:', error);
-}
-};
+  };
   // State to handle the toggle between sign-in and sign-up
   const [isSignIn, setIsSignIn] = useState(true);
 
@@ -102,51 +100,58 @@ try {
   };
 
   return (
-    <div id="container" className={`container ${isSignIn ? "sign-in" : "sign-up"}`}>
+    <div
+      id="container"
+      className={`container ${isSignIn ? "sign-in" : "sign-up"}`}
+    >
       {/* FORM SECTION */}
       <div className="row">
         {/* SIGN UP */}
         <div className="col align-items-center flex-col sign-up">
           <div className="form-wrapper align-items-center">
-            <form className="form sign-up" id="signup-form" onSubmit = {handleSubmit}>
-              <div className="input-group" id = "username">
+            <form
+              className="form sign-up"
+              id="signup-form"
+              onSubmit={handleSubmit}
+            >
+              <div className="input-group" id="username">
                 <i className="bx bxs-user"></i>
                 <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    value={formData.username}
-                    onChange={handleChange}
-                    placeholder = "Username"
-                    required
+                  type="text"
+                  id="username"
+                  name="username"
+                  value={formData.username}
+                  onChange={handleChange}
+                  placeholder="Username"
+                  required
                 />
               </div>
-              <div className="input-group" id = "email">
+              <div className="input-group" id="email">
                 <i className="bx bx-mail-send"></i>
                 <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Email"
-                    required
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Email"
+                  required
                 />
               </div>
-              <div className="input-group" id = "pasword">
+              <div className="input-group" id="pasword">
                 <i className="bx bxs-lock-alt"></i>
-                 <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    placeholder="Password"
-                    required
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  placeholder="Password"
+                  required
                 />
               </div>
-             
-              <button type = "submit">Sign up</button>
+
+              <button type="submit">Sign up</button>
 
               {message && <p>{message}</p>}
 
@@ -168,25 +173,23 @@ try {
               <div className="input-group">
                 <i className="bx bxs-user"></i>
                 <input
-                    type="email"
-                    
-                    name="email"
-                    value={formDataSignIn.email}
-                    onChange={handleChangeSignIn}
-                    placeholder="Email"
-                    required
+                  type="email"
+                  name="email"
+                  value={formDataSignIn.email}
+                  onChange={handleChangeSignIn}
+                  placeholder="Email"
+                  required
                 />
               </div>
               <div className="input-group">
                 <i className="bx bxs-lock-alt"></i>
                 <input
-                    type="password"
-                   
-                    name="password"
-                    value={formDataSignIn.password}
-                    onChange={handleChangeSignIn}
-                    placeholder="Password"
-                    required
+                  type="password"
+                  name="password"
+                  value={formDataSignIn.password}
+                  onChange={handleChangeSignIn}
+                  placeholder="Password"
+                  required
                 />
               </div>
               <button type="submit">Sign in</button>
@@ -194,7 +197,7 @@ try {
               <p>
                 <span>Don't have an account?</span>
                 <b onClick={toggle} className="pointer">
-                   Sign up here
+                  Sign up here
                 </b>
               </p>
             </form>

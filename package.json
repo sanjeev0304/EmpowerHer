@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.1.0",
+    "chart.js": "^4.4.7",
     "dangerous-html": "0.1.13",
     "dotenv": "^16.4.7",
     "next": "^12.1.10",

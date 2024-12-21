@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../images/logo1.png";
 import { useHistory } from "react-router-dom";
 
-const  Navbar = () => {
+const Navbar = () => {
   const history = useHistory();
 
   const handleNavigateToSignUp = () => {
@@ -258,11 +258,11 @@ const  Navbar = () => {
           <div style={{ marginLeft: "1rem" }}>
             {!isLoggedIn ? (
               <button
-              style={{ ...authButtonStyle }}
-              onClick={handleNavigateToSignUp}
-            >
-              Register/Login
-            </button>
+                style={{ ...authButtonStyle }}
+                onClick={handleNavigateToSignUp}
+              >
+                Register/Login
+              </button>
             ) : (
               <>
                 <button
@@ -329,11 +329,11 @@ const  Navbar = () => {
               <div style={{ marginTop: "1rem" }}>
                 {!isLoggedIn ? (
                   <button
-                  style={{ ...authButtonStyle, width: "100%" }}
-                  onClick={handleNavigateToSignUp}
-                >
-                  Register/Login
-                </button>
+                    style={{ ...authButtonStyle, width: "100%" }}
+                    onClick={handleNavigateToSignUp}
+                  >
+                    Register/Login
+                  </button>
                 ) : (
                   <>
                     <button
@@ -361,6 +361,6 @@ const  Navbar = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
