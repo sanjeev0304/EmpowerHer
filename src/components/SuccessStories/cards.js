@@ -1,23 +1,59 @@
 import React from "react";
-import "./Card.css"; // Ensure this path matches the location of your CSS file
+import PropTypes from "prop-types";
+import "./Card.css";
 
-const Card = (props) => {
+const Cards = ({ womenData }) => {
   return (
-    <div className="main">
-      <div className="card">
-        <div className="img"></div>
-        {/* to add image using the props */}
+    <div className="thq-section-padding">
+      <div className="thq-section-max-width">
+        {womenData.map((woman, index) => (
+          <div className="cta26-accent2-bg" key={index}>
+            <div className="cta26-accent1-bg">
+              <div className="cta26-container2">
+                <div className="cta26-content">
+                  {woman.name && (
+                    <span className="thq-heading-2">{woman.name}</span>
+                  )}
+                  {woman.journey && (
+                    <p className="thq-body-large">{woman.journey}</p>
+                  )}
+                </div>
 
-        <span>Name</span>
-        <p>{props.name}</p>
-
-        <span>About Me</span>
-        <p className="info">{props.story}</p>
-
-        <button>Watch Now!!!</button>
+                <div className="cta26-actions">
+                  {woman.actionText && (
+                    <a
+                      href={woman.link}
+                      className="thq-button-filled cta26-button"
+                      textDecoration="none"
+                    >
+                      <span>{woman.actionText}</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Card;
+Cards.defaultProps = {
+  womenData: [],
+};
+
+Cards.propTypes = {
+  womenData: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      journey: PropTypes.string,
+      tips: PropTypes.string,
+      content: PropTypes.string,
+      actionText: PropTypes.string,
+      link: PropTypes.string,
+    })
+  ),
+};
+
+export default Cards;
