@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../components/SuccessStories/Cards";
+import Cards from "../components/SuccessStories/cards";
 
 const womenData = [
   {
