@@ -7,7 +7,7 @@ import Home from "./pages/home";
 
 import SignUpForm from "./components/Home/SignUpForm";
 
-import Stories from "./pages/stories";
+import SuccessStories from "./pages/SuccessStories";
 import learning from "./pages/learning";
 import govtSchemes from "./pages/govtSchems";
 import Calculator from "./pages/Calculator";
@@ -36,7 +36,7 @@ const App = () => {
 
           <Route component={SignUpForm} exact path="/SignUp" />
 
-          <Route component={Stories} exact path="/Stories" />
+          <Route component={SuccessStories} exact path="/Stories" />
           <Route component={learning} exact path="/Learning" />
           <Route component={govtSchemes} exact path="/GovernmentSchemes" />
           <Route component={Calculator} exact path="/FinancialCalculator" />

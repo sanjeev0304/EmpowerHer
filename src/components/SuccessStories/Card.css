@@ -1,84 +1,89 @@
-/* From Uiverse.io by Praashoo7  */
-
-.main {
+.cta26-accent2-bg {
+  /* gap: var(--dl-space-space-oneandhalfunits); */
   display: flex;
-  margin-top: 200px;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(1deg) skew(0deg, 0deg);
+  align-self: stretch;
+  transition: 0.3s;
+  align-items: center;
+  border-radius: var(--dl-radius-radius-cardradius);
+  justify-content: space-between;
+  transform-style: preserve-3d;
+  background-color: rgb(245, 209, 176);
+  margin-bottom: 10%;
 }
-
-.card {
-  width: 17em;
-  height: 22.5em;
-  background: #171717;
-  transition: 1s ease-in-out;
-  clip-path: polygon(
-    30px 0%,
-    100% 0,
-    100% calc(100% - 30px),
-    calc(100% - 30px) 100%,
-    0 100%,
-    0% 30px
-  );
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+.cta26-accent2-bg:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.cta26-accent1-bg {
+  width: 100%;
   display: flex;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(-2deg) skew(0deg, 0deg);
+  align-items: center;
+  border-radius: var(--dl-radius-radius-cardradius);
+  justify-content: space-between;
+  transform-style: preserve-3d;
+  background-color: var(--dl-color-theme-neutral-dark);
+  color: var(--dl-color-theme-neutral-light);
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.cta26-container2 {
+  /* gap: var(--dl-space-space-tenunits); */
+  width: 100%;
+  display: flex;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(1deg) skew(0deg, 0deg);
+  transition: 0.3s;
+  align-items: center;
+  margin-top: var(--dl-space-space-tenunits);
+  padding-top: var(--dl-space-space-sixunits);
+  padding-left: var(--dl-space-space-fourunits);
+  border-radius: var(--dl-radius-radius-cardradius);
+  padding-right: var(--dl-space-space-fourunits);
+  padding-bottom: var(--dl-space-space-sixunits);
+}
+.cta26-container2:hover {
+  color: black;
+  background-color: var(--dl-color-theme-accent1);
+}
+.cta26-content {
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-items: flex-start;
   flex-direction: column;
 }
-
-.card span {
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  display: block;
-  font-size: 1em;
-}
-
-.card .info {
-  font-weight: 400;
-  color: white;
-  display: block;
-  text-align: center;
-  font-size: 0.72em;
-  margin: 1em;
-}
-
-.card .img {
-  width: 4.8em;
-  height: 4.8em;
-  background: white;
-  border-radius: 15px;
-  margin: auto;
-}
-
-.card .share {
-  margin-top: 1em;
+.cta26-actions {
+  gap: var(--dl-space-space-oneandhalfunits);
+  flex: 1;
   display: flex;
-  justify-content: center;
-  gap: 1em;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
-
-.card a {
-  color: white;
-  transition: 0.4s ease-in-out;
+.cta26-text4 {
+  display: inline-block;
 }
-
-.card a:hover {
-  color: red;
+.cta26-text5 {
+  display: inline-block;
 }
-
-.card button {
-  padding: 0.8em 1.7em;
-  display: block;
-  margin: auto;
-  border-radius: 25px;
-  border: none;
-  font-weight: bold;
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  transition: 0.4s ease-in-out;
+.cta26-text6 {
+  display: inline-block;
 }
-
-.card button:hover {
-  background: red;
-  color: white;
-  cursor: pointer;
+@media (max-width: 767px) {
+  .cta26-container2 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 479px) {
+  .cta26-actions {
+    flex-wrap: wrap;
+    align-self: stretch;
+    justify-content: center;
+  }
+  .cta26-button {
+    flex: 1;
+  }
 }
