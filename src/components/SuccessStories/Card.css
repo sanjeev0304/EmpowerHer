@@ -44,10 +44,11 @@
   padding-right: var(--dl-space-space-fourunits);
   padding-bottom: var(--dl-space-space-sixunits);
 }
-.cta26-container2:hover {
-  color: black;
-  background-color: var(--dl-color-theme-accent1);
-}
+/* .cta26-container2:hover {
+  /* color: black; */
+  /* background-color: var(--dl-color-theme-accent1); */
+/* }  */
+*/
 .cta26-content {
   gap: var(--dl-space-space-oneandhalfunits);
   display: flex;
