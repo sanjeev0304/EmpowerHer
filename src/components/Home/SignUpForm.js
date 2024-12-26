@@ -101,7 +101,7 @@ const AuthForm = () => {
 
   return (
     <div
-      id="container"
+      id="signincontainer"
       className={`container ${isSignIn ? "sign-in" : "sign-up"}`}
     >
       {/* FORM SECTION */}

@@ -11,6 +11,7 @@ import learning from "./pages/learning";
 import govtSchemes from "./pages/govtSchems";
 import Calculator from "./pages/Calculator";
 import MarketingStrategyForm from "./pages/MarketingStrategyForm";
+import BusinessPlan from "./pages/BusinessPlan";
 
 const App = () => {
   useEffect(() => {
@@ -52,6 +53,7 @@ const App = () => {
             <Route component={govtSchemes} exact path="/GovernmentSchemes" />
             <Route component={Calculator} exact path="/FinancialCalculator" />
             <Route component={MarketingStrategyForm} exact path="/Strategy" />
+            <Route component={BusinessPlan} exact path="/BusinessPlan" />
           </Switch>
         </Router>
       </div>
