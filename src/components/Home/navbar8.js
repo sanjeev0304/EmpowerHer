@@ -93,8 +93,7 @@ const Navbar = () => {
 
   const menuItems = {
     aiTools: [
-      { label: "Business Plan Generator", link: "/BusinessPlanGenerator" },
-      { label: "Market Analysis", link: "/MarketAnalysis" },
+      { label: "Business Plan Generator", link: "/BusinessPlan" },
       { label: "Financial Projections", link: "/FinancialProjections" },
       { label: "Marketing Strategy", link: "/Strategy" },
       { label: "Multilingual Translation", link: "/MultilingualTranslation" },

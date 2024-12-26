@@ -1,4 +1,4 @@
-:root {
+#signincontainer {
   --primary-color: #f18469;
   --secondary-color: #f18469;
   --black: #000000;
@@ -23,7 +23,7 @@
 
 
 
-.container {
+#signincontainer {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
@@ -207,6 +207,7 @@
   font-weight: 800;
   margin: 2rem 0;
   transition: 1s ease-in-out;
+  color: var(--white);
 }
 
 .text p {
