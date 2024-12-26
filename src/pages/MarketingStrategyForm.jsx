@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import './Form.css'
+
 const API_URL = process.env.REACT_APP_API_URL;
 
 const MarketingStrategyForm = () => {
@@ -59,7 +61,7 @@ const MarketingStrategyForm = () => {
   };
 
   return (
-    <div>
+    <div className="container1">
       <h1>Marketing Strategy Generator</h1>
       <form onSubmit={handleSubmit}>
         <input

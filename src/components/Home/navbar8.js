@@ -100,7 +100,7 @@ const Navbar = () => {
       { label: "Multilingual Translation", link: "/MultilingualTranslation" },
     ],
     learning: [
-      { label: "Sucess Stories", link: "/Stories" },
+      { label: "Success Stories", link: "/Stories" },
       { label: "Learning", link: "/Learning" },
       { label: "Government Schemes", link: "/GovernmentSchemes" },
     ],

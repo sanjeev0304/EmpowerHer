@@ -1,0 +1,97 @@
+/* MarketingStrategyForm.css */
+
+/* General container styling */
+.container1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Heading styling */
+  .container1 h1 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+  
+  /* Input fields styling */
+  form input[type="text"] {
+    flex: 1 1 calc(50% - 10px); /* Two inputs per row */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  form input[type="text"]::placeholder {
+    color: #aaa;
+    font-size: 12px;
+  }
+  
+  /* Button styling */
+  form button {
+    flex: 1 1 100%; /* Button spans full width */
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #e65500;
+  }
+  
+  form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Strategy result section */
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  pre {
+    background-color: #e7f3ff;
+    border: 1px solid #b3d7ff;
+    padding: 15px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* Error message */
+  p {
+    text-align: center;
+  }
+  
+  p[style*="color: red"] {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Loader message */
+  p[style*="color:"] {
+    font-style: italic;
+  }
+  
