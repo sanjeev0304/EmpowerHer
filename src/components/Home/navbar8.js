@@ -96,7 +96,7 @@ const Navbar = () => {
       { label: "Business Plan Generator", link: "/BusinessPlanGenerator" },
       { label: "Market Analysis", link: "/MarketAnalysis" },
       { label: "Financial Projections", link: "/FinancialProjections" },
-      { label: "Marketing Strategy", link: "/MarketingStrategy" },
+      { label: "Marketing Strategy", link: "/Strategy" },
       { label: "Multilingual Translation", link: "/MultilingualTranslation" },
     ],
     learning: [
