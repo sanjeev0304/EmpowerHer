@@ -12,6 +12,7 @@ import govtSchemes from "./pages/govtSchems";
 import Calculator from "./pages/Calculator";
 import MarketingStrategyForm from "./pages/MarketingStrategyForm";
 import BusinessPlan from "./pages/BusinessPlan";
+import NameGenerator from "./pages/NameGenerator";
 
 const App = () => {
   useEffect(() => {
@@ -54,6 +55,7 @@ const App = () => {
             <Route component={Calculator} exact path="/FinancialCalculator" />
             <Route component={MarketingStrategyForm} exact path="/Strategy" />
             <Route component={BusinessPlan} exact path="/BusinessPlan" />
+            <Route component={NameGenerator} exact path="/GenerateName" />
           </Switch>
         </Router>
       </div>

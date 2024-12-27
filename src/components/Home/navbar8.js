@@ -94,7 +94,7 @@ const Navbar = () => {
   const menuItems = {
     aiTools: [
       { label: "Business Plan Generator", link: "/BusinessPlan" },
-      { label: "Financial Projections", link: "/FinancialProjections" },
+      { label: "Business Name Generator", link: "/GenerateName" },
       { label: "Marketing Strategy", link: "/Strategy" },
       { label: "Multilingual Translation", link: "/MultilingualTranslation" },
     ],
