@@ -1,0 +1,99 @@
+/* TimelineGenerator.module.css */
+
+.test{
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.timeline-generator-container {
+    background: #ffffff; /* White background */
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+}
+
+.heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    font-size: 1rem;
+    min-height: 100px;
+}
+
+.button {
+    background-color: #ff5722; /* Orange button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button:disabled {
+    background-color: #ff8a50; /* Lighter orange for disabled button */
+    cursor: not-allowed;
+  }
+
+.button:hover:enabled {
+    background-color: #e64a19; /* Darker orange on hover */
+  }
+  
+.buttonHover:enabled {
+    background-color: #e64a19; /* Darker orange on hover */
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.resultsHeading {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.listItem {
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: left;
+    color: #444;
+}
+
+.listItem strong {
+    color: #333;
+}

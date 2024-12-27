@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import Navbar from "../components/Home/navbar8";
+import "./TimelineGenerator.css";
 const API_URL = process.env.REACT_APP_API_URL;
 
 const TimelineGenerator = () => {
@@ -38,12 +39,16 @@ const TimelineGenerator = () => {
   };
 
   return (
+    <>
+<Navbar />
+<div className="test">
     <div className="timeline-generator-container">
-      <h1>Business Timeline Generator</h1>
+      <h1 className="heading">Business Timeline Generator</h1>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="businessIdea">Business Idea:</label>
-          <textarea
+        <div className="formGroup">
+          <label className="label" htmlFor="businessIdea">Business Idea:</label>
+          <textarea 
+          className="textarea"
             id="businessIdea"
             name="businessIdea"
             value={businessIdea}
@@ -52,7 +57,7 @@ const TimelineGenerator = () => {
             required
           />
         </div>
-        <button type="submit" disabled={loading}>
+        <button className="button"  type="submit" disabled={loading}>
           {loading ? "Generating..." : "Generate Timeline"}
         </button>
       </form>
@@ -72,6 +77,8 @@ const TimelineGenerator = () => {
       )}
       {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
+    </div>
+    </>
   );
 };
 
