@@ -13,6 +13,7 @@ import Calculator from "./pages/Calculator";
 import MarketingStrategyForm from "./pages/MarketingStrategyForm";
 import BusinessPlan from "./pages/BusinessPlan";
 import NameGenerator from "./pages/NameGenerator";
+import TimelineGenerator from "./pages/TimelineGenerator";
 
 
 const App = () => {
@@ -57,6 +58,7 @@ const App = () => {
             <Route component={MarketingStrategyForm} exact path="/Strategy" />
             <Route component={BusinessPlan} exact path="/BusinessPlan" />
             <Route component={NameGenerator} exact path="/GenerateName" />
+            <Route component={TimelineGenerator} exact path="/TimelinePlanner" />
           </Switch>
         </Router>
       </div>
