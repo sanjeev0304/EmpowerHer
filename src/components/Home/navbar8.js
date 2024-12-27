@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import logo from "../images/logo1.png";
 import { useHistory } from "react-router-dom";
+import { AuthContext } from "../../pages/AuthContext";
+import { useContext } from "react";
 
 const Navbar = () => {
   const history = useHistory();
@@ -9,13 +11,17 @@ const Navbar = () => {
     history.push("/Signup"); // Navigate to the sign-up page
   };
 
+  const handleDashBoard = () => {
+    history.push("/DashBoard");
+  }
+
   const [isDropdownOpen, setIsDropdownOpen] = useState({
     aiTools: false,
     learning: false,
     community: false,
     tools: false,
   });
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -266,13 +272,13 @@ const Navbar = () => {
               <>
                 <button
                   style={authButtonStyle}
-                  onClick={() => console.log("Redirect to Dashboard")}
+                  onClick={handleDashBoard}
                 >
                   Dashboard
                 </button>
                 <button
                   style={{ ...authButtonStyle, marginLeft: "0.5rem" }}
-                  onClick={() => console.log("Logging out")}
+                  onClick={() => setIsLoggedIn(false)}
                 >
                   Logout
                 </button>
