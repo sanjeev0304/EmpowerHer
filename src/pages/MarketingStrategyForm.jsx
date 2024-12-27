@@ -85,6 +85,7 @@ const MarketingStrategyForm = () => {
           value={formData.time_per_week}
           onChange={handleChange}
         />
+        <h3>Target Customers</h3>
         <input
           type="text"
           name="age_group"
@@ -106,6 +107,7 @@ const MarketingStrategyForm = () => {
           value={formData.location}
           onChange={handleChange}
         />
+        <h3>Social media and marketing</h3>
         <input
           type="text"
           name="social_media"
