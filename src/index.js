@@ -18,6 +18,7 @@ import LogoMaker from "./pages/LogoMaker";
 import { AuthProvider } from "./pages/AuthContext";
 import Navbar from "./components/Home/navbar8";
 import DashBoard from "./pages/DashBoard";
+import AboutUs from "./pages/AboutUs";
 
 
 const App = () => {
@@ -54,7 +55,7 @@ const App = () => {
       <div>
         <div id="google_translate_element" style={{ marginBottom: "20px" }}></div>
         <Router>
-        <Navbar/>
+        
           <Switch>
             <Route component={Home} exact path="/" />
             <Route component={SignUpForm} exact path="/SignUp" />
@@ -68,6 +69,7 @@ const App = () => {
             <Route component={TimelineGenerator} exact path="/TimelinePlanner" />
             <Route component={LogoMaker} exact path="/LogoMaker" />
             <Route component={DashBoard} exact path="/DashBoard" />
+            <Route component={AboutUs} exact path="/AboutUs" />
             
 
           </Switch>

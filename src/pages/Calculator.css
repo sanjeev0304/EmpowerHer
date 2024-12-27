@@ -1,19 +1,19 @@
 /* Styling for the container */
 .app-container {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 10px;
 }
 
-.header {
+.calcheader {
   margin-bottom: 20px;
 }
 
-.button-container {
+.calcbutton-container {
   margin: 20px 0;
 }
 
 
-button {
+.calcbutton {
   background-color: rgb(230, 81, 3);
   color: white;
   border: none;
@@ -25,8 +25,8 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #04080b;
+.calcbutton:hover {
+  background-color: #121313;
 }
 
 .component-display {

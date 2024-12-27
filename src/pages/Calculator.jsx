@@ -21,14 +21,14 @@ export default function Calculator() {
   return (
     <>
     <div className="app-container">
-      <div className="header">
+      <div className="calcheader">
         <h1>Financial Calculator</h1>
       </div>
-      <div className="button-container">
-        <button onClick={() => setSelectedComponent("initial")}>
+      <div className="calcbutton-container">
+        <button className="calcbutton" onClick={() => setSelectedComponent("initial")}>
           Initial Investment
         </button>
-        <button onClick={() => setSelectedComponent("monthly")}>
+        <button className="calcbutton" onClick={() => setSelectedComponent("monthly")}>
           Monthly Projections
         </button>
       </div>

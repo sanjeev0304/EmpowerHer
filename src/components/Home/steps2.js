@@ -14,16 +14,19 @@ const Steps2 = (props) => {
               Discover the Power of Our Products
             </h2>
             <p className="thq-body-large">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
+             From crafting detailed business plans to streamlining
+              marketing strategies, we provide everything you need to succeed.
+              Whether you're managing finances, planning timelines, or seeking
+              inspiration from success stories, our platform ensures that every
+              step of your journey is supported. Explore the possibilities,
+              unlock your potential, and let us guide you toward building a
+              thriving and impactful business.
             </p>
-            <div className="steps2-actions">
+            {/* <div className="steps2-actions">
               <button className="thq-button-animated thq-button-filled steps2-button">
                 <span className="thq-body-small">Main action</span>
               </button>
-            </div>
+            </div> */}
           </div>
           <div className="steps2-container3">
             <div className="steps2-container4 thq-card">
