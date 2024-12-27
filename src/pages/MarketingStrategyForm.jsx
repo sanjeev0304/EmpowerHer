@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Navbar from "../components/Home/navbar8";
 import './Form.css'
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -61,6 +61,8 @@ const MarketingStrategyForm = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="container1">
       <h1>Marketing Strategy Generator</h1>
       <form onSubmit={handleSubmit}>
@@ -207,6 +209,7 @@ const MarketingStrategyForm = () => {
       )}
       {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
+    </>
   );
 };
 

@@ -71,6 +71,7 @@
   .cta26-text6 {
     display: inline-block;
   }
+
   @media (max-width: 767px) {
     .cta26-container2 {
       gap: var(--dl-space-space-oneandhalfunits);

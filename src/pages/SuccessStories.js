@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "../components/SuccessStories/cards";
-
+import Navbar from "../components/Home/navbar8";
 const womenData = [
   {
     name: "Bina Devi",
@@ -54,14 +54,17 @@ const womenData = [
 
 const stories = () => {
   return (
+<>
+    <Navbar />
     <div className="stories">
+
       <h1
         style={{
           fontSize: "2.5rem",
           fontWeight: "bold",
           // color: "#2c3e50", // Dark blue-gray color
           textAlign: "center",
-          marginTop: "5vh",
+          marginTop: "150px",
           fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
           letterSpacing: "1px",
           lineHeight: "1.4",
@@ -72,6 +75,7 @@ const stories = () => {
       </h1>
       <Cards womenData={womenData} />
     </div>
+    </>
   );
 };
 

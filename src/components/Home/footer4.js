@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-
 import PropTypes from "prop-types";
 
 import "./footer4.css";
@@ -7,83 +6,12 @@ import "./footer4.css";
 const Footer4 = (props) => {
   return (
     <footer className="footer4-footer7 thq-section-padding">
-      <div className="footer4-max-width thq-section-max-width">
-        <div className="footer4-content">
-          <div className="footer4-logo1">
-            <img
-              alt={props.logoAlt}
-              src={props.logoSrc}
-              className="footer4-logo2"
-            />
-          </div>
-          <div className="footer4-links">
-            <a
-              href="https://example.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="thq-body-small"
-            >
-              {props.link1 ?? (
-                <Fragment>
-                  <span className="footer4-text16">About Us</span>
-                </Fragment>
-              )}
-            </a>
-            <a
-              href="https://example.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="thq-body-small"
-            >
-              {props.link2 ?? (
-                <Fragment>
-                  <span className="footer4-text18">Services</span>
-                </Fragment>
-              )}
-            </a>
-            <a
-              href="https://example.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="thq-body-small"
-            >
-              {props.link3 ?? (
-                <Fragment>
-                  <span className="footer4-text15">Blog</span>
-                </Fragment>
-              )}
-            </a>
-            <a
-              href="https://example.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="thq-body-small"
-            >
-              {props.link4 ?? (
-                <Fragment>
-                  <span className="footer4-text19">Contact Us</span>
-                </Fragment>
-              )}
-            </a>
-            <a
-              href="https://example.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="thq-body-small"
-            >
-              {props.link5 ?? (
-                <Fragment>
-                  <span className="footer4-text14">FAQs</span>
-                </Fragment>
-              )}
-            </a>
-          </div>
-        </div>
+      
         <div className="footer4-credits">
           <div className="thq-divider-horizontal"></div>
           <div className="footer4-row">
             <div className="footer4-container">
-              <span className="thq-body-small">© 2024 TeleportHQ</span>
+              <span className="thq-body-small">© 2024 Empower AI</span>
             </div>
             <div className="footer4-footer-links">
               <span className="footer4-text11 thq-body-small">
@@ -110,7 +38,6 @@ const Footer4 = (props) => {
             </div>
           </div>
         </div>
-      </div>
     </footer>
   );
 };
@@ -124,7 +51,7 @@ Footer4.defaultProps = {
   link4: undefined,
   logoAlt: "AI for Women Entrepreneurs",
   cookiesLink: undefined,
-  logoSrc: "https://presentation-website-assets.teleporthq.io/logos/logo.png",
+  logoSrc: "src/components/images/logo1.png",
   privacyLink: undefined,
 };
 
