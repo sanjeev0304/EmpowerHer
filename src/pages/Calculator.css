@@ -1,63 +1,38 @@
 /* Styling for the container */
-.container1 {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-family: Arial, sans-serif;
-}
-
-.container1 h1 {
+.app-container {
   text-align: center;
-  color: #333;
+  margin-top: 10%;
+}
+
+.header {
   margin-bottom: 20px;
-  font-weight: bold;
 }
 
-/* Form grid layout */
-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+.button-container {
+  margin: 20px 0;
 }
 
-form .form-group {
-  display: flex;
-  flex-direction: column;
-}
 
-form label {
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #555;
-}
-
-form input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-form button {
-  grid-column: span 2;
-  padding: 10px;
-  background-color: #007bff;
+button {
+  background-color: rgb(230, 81, 3);
   color: white;
   border: none;
+  padding: 10px 20px;
+  margin: 10px;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-form button:hover {
-  background-color: #0056b3;
+button:hover {
+  background-color: #04080b;
 }
 
-.error {
-  grid-column: span 2;
-  color: red;
-  font-size: 14px;
+.component-display {
+  margin-top: 2px;
+  /* background: rgba(0, 0, 0, 0.6); */
+  padding: 2px;
+  border-radius: 10px;
+  display: inline-block;
 }

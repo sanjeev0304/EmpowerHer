@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./Calculator.css";
 import InvestmentCalculator from "../components/FinancialCalculator/investmentcalc";
 import MonthlyCalc from "../components/FinancialCalculator/monthlyprojection";
-import Navbar from "../components/Home/navbar8";
+import './Calculator.css';
+
 export default function Calculator() {
   const [selectedComponent, setSelectedComponent] = useState(null);
 
@@ -19,7 +20,6 @@ export default function Calculator() {
 
   return (
     <>
-    {/* <Navbar /> */}
     <div className="app-container">
       <div className="header">
         <h1>Financial Calculator</h1>

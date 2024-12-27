@@ -106,12 +106,12 @@ const Navbar = () => {
     ],
     learning: [
       { label: "Success Stories", link: "/Stories" },
-      { label: "Learning", link: "/Learning" },
+      // { label: "Learning", link: "/Learning" },
       { label: "Government Schemes", link: "/GovernmentSchemes" },
     ],
     tools: [
       { label: "Financial Calculator", link: "/FinancialCalculator" },
-      // { label: "Logo Maker", link: "/LogoMaker" },
+      { label: "Logo Maker", link: "/LogoMaker" },
       { label: "Timeline Planner", link: "/TimelinePlanner" },
     ],
   };
