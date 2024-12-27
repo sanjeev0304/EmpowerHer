@@ -1,0 +1,102 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container1 {
+    max-width: 600px;
+    margin: 50px auto;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: small;
+    margin-bottom: 5px;
+    display: block;
+    color: #555555;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]::placeholder {
+    font-size: 10px;
+    color: #aaaaaa;
+  }
+  
+  input[type="text"]:focus,
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  /* Loading and result messages */
+  pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  p[style="color: red;"] {
+    color: #ff4d4d;
+    font-weight: bold;
+  }
+  

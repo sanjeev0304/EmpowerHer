@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import Navbar from "../components/Home/navbar8";
+import './name.css';
 const API_URL = process.env.REACT_APP_API_URL;
 
 const NameGenerator = () => {
@@ -57,7 +58,9 @@ const NameGenerator = () => {
   };
 
   return (
-    <div className="name-generator-container">
+    <>
+    <Navbar />
+    <div className="container1">
       <h1>Business Name Generator</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -189,6 +192,7 @@ const NameGenerator = () => {
       )}
       {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
+    </>
   );
 };
 

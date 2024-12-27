@@ -66,6 +66,7 @@ const MarketingStrategyForm = () => {
     <div className="container1">
       <h1>Marketing Strategy Generator</h1>
       <form onSubmit={handleSubmit}>
+        <h3>Basic Business Details</h3>
         <input
           type="text"
           name="business_name"
@@ -94,6 +95,7 @@ const MarketingStrategyForm = () => {
           value={formData.time_per_week}
           onChange={handleChange}
         />
+        <h3>Target Customers</h3>
         <input
           type="text"
           name="age_group"
@@ -115,6 +117,7 @@ const MarketingStrategyForm = () => {
           value={formData.location}
           onChange={handleChange}
         />
+        <h3>Social media and marketing</h3>
         <input
           type="text"
           name="social_media"
@@ -178,6 +181,7 @@ const MarketingStrategyForm = () => {
           value={formData.printed_materials}
           onChange={handleChange}
         />
+        <h3>Budget for Marketing</h3>
         <input
           type="text"
           name="local_marketing_budget"
