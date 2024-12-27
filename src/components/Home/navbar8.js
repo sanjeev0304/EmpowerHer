@@ -96,7 +96,7 @@ const Navbar = () => {
       { label: "Business Plan Generator", link: "/BusinessPlan" },
       { label: "Business Name Generator", link: "/GenerateName" },
       { label: "Marketing Strategy", link: "/Strategy" },
-      { label: "Multilingual Translation", link: "/MultilingualTranslation" },
+      // { label: "Multilingual Translation", link: "/MultilingualTranslation" },
     ],
     learning: [
       { label: "Success Stories", link: "/Stories" },
@@ -105,7 +105,7 @@ const Navbar = () => {
     ],
     tools: [
       { label: "Financial Calculator", link: "/FinancialCalculator" },
-      { label: "Logo Maker", link: "/LogoMaker" },
+      // { label: "Logo Maker", link: "/LogoMaker" },
       { label: "Timeline Planner", link: "/TimelinePlanner" },
     ],
   };
