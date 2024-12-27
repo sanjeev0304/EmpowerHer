@@ -19,7 +19,7 @@ export default function Calculator() {
 
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <div className="app-container">
       <div className="header">
         <h1>Financial Calculator</h1>
