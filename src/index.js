@@ -14,6 +14,10 @@ import MarketingStrategyForm from "./pages/MarketingStrategyForm";
 import BusinessPlan from "./pages/BusinessPlan";
 import NameGenerator from "./pages/NameGenerator";
 import TimelineGenerator from "./pages/TimelineGenerator";
+import LogoMaker from "./pages/LogoMaker";
+import { AuthProvider } from "./pages/AuthContext";
+import Navbar from "./components/Home/navbar8";
+import DashBoard from "./pages/DashBoard";
 
 
 const App = () => {
@@ -43,11 +47,14 @@ const App = () => {
   }, []);
 
   return (
+    <AuthProvider>
     <>
       {/* Main content renders immediately */}
+     
       <div>
         <div id="google_translate_element" style={{ marginBottom: "20px" }}></div>
         <Router>
+        <Navbar/>
           <Switch>
             <Route component={Home} exact path="/" />
             <Route component={SignUpForm} exact path="/SignUp" />
@@ -59,11 +66,16 @@ const App = () => {
             <Route component={BusinessPlan} exact path="/BusinessPlan" />
             <Route component={NameGenerator} exact path="/GenerateName" />
             <Route component={TimelineGenerator} exact path="/TimelinePlanner" />
+            <Route component={LogoMaker} exact path="/LogoMaker" />
+            <Route component={DashBoard} exact path="/DashBoard" />
+            
+
           </Switch>
         </Router>
       </div>
+      
     </>
-    
+    </AuthProvider>
   );
 };
 

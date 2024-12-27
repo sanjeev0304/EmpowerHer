@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./SignUpForm.css"; // Add your styles here or use inline styles.
 import { useHistory } from "react-router-dom";
+import { AuthContext } from "../../pages/AuthContext";
+import { useContext } from "react";
+
 
 const AuthForm = () => {
   const history = useHistory();
@@ -13,6 +16,7 @@ const AuthForm = () => {
   });
 
   const [message, setMessage] = useState("");
+  const {isLoggedIn,setIsLoggedIn} = useContext(AuthContext);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -35,8 +39,8 @@ const AuthForm = () => {
       if (response.ok) {
         const data = await response.json();
         setMessage("Registration successful!");
-        console.log("Response:", data);
-
+        // console.log("Response:", data);
+        setIsLoggedIn(true);
         history.push("/");
       } else {
         const error = await response.json();
@@ -78,7 +82,8 @@ const AuthForm = () => {
       if (response.ok) {
         const data = await response.json();
         setMessageSignIn("Login successful!");
-        console.log("Response:", data);
+        // console.log("Response:", data);
+        setIsLoggedIn(true);
         history.push("/");
       } else {
         const error = await response.json();
