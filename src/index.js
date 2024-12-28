@@ -21,6 +21,7 @@ import DashBoard from "./pages/DashBoard";
 import AboutUs from "./pages/AboutUs";
 
 
+
 const App = () => {
   useEffect(() => {
     // Initialize Google Translate Widget after a delay
@@ -71,7 +72,7 @@ const App = () => {
             <Route component={LogoMaker} exact path="/LogoMaker" />
             <Route component={DashBoard} exact path="/DashBoard" />
             <Route component={AboutUs} exact path="/AboutUs" />
-            
+            <Route component={learning} exact path="/Learning" />
 
           </Switch>
         </Router>

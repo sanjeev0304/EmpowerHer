@@ -1,37 +1,43 @@
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+import Navbar8 from "../components/Home/navbar8";
+import Hero17 from "../components/Home/hero17";
+import Features24 from "../components/Home/features24";
+import CTA26 from "../components/Home/cta26";
+import Features25 from "../components/Home/features25";
+import Steps2 from "../components/Home/steps2";
+import Footer4 from "../components/Home/footer4";
 
-import React, { Fragment } from 'react';
-import { Helmet } from 'react-helmet';
-import { useEffect,useState } from 'react';
-import Navbar8 from '../components/Home/navbar8';
-import Hero17 from '../components/Home/hero17';
-import Features24 from '../components/Home/features24';
-import CTA26 from '../components/Home/cta26';
-import Features25 from '../components/Home/features25';
-import Steps2 from '../components/Home/steps2';
-import Footer4 from '../components/Home/footer4';
-
-import './home.css';
+import "./home.css";
 
 const Home = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
 
-  // Show the popup when the component mounts (i.e., when the page loads)
   useEffect(() => {
-    setPopupVisible(true);
+    // Check localStorage for the popup flag
+    const hasPopupBeenShown = localStorage.getItem("hasPopupBeenShown");
+
+    if (!hasPopupBeenShown) {
+      // Show popup and set the flag in localStorage
+      setPopupVisible(true);
+      localStorage.setItem("hasPopupBeenShown", "true");
+    }
   }, []);
 
-  // Function to close the popup
   const closePopup = () => {
     setPopupVisible(false);
   };
+
   return (
     <div className="home-container">
       {isPopupVisible && (
         <div className="popup">
           <div className="popup-content">
             <h2>Welcome to Empower AI - A Platform that Empowers Women Entrepreneurs</h2>
-            <h3></h3>
-            <p> There is a Get Started button visible after closing of the popup which will help you Understand more about our website!!</p>
+            <p>
+              There is a Get Started button visible after closing of the popup
+              which will help you Understand more about our website!!
+            </p>
             <button className="button" onClick={closePopup}>
               Close
             </button>
@@ -46,17 +52,11 @@ const Home = () => {
       <Navbar8
         page1={<span>Business Plan Generartor</span>}
         page2={<span>Market Analysis</span>}
-        // page3={<span>Services</span>}
-        // page4={<span>Contact</span>}F
         link1={<span>Home</span>}
         link2={<span>About</span>}
         link4={<span>Services</span>}
         page1Description={<span>Get Your Business ideas and plans instantly</span>}
         page2Description={<span>Understand about your market and its trends</span>}
-        // page3Description={<span>Explore the AI services we offer</span>}
-        // page4Description={
-        //   <span>Get in touch with us for collaborations and inquiries</span>
-        // }
         action1={<span>Sign Up</span>}
       />
 
@@ -138,8 +138,6 @@ const Home = () => {
           <span>Track and analyze the impact of AI on your business.</span>
         }
       />
-
-     
 
       <Footer4
         link1={<span>About Us</span>}
