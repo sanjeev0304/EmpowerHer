@@ -5,7 +5,7 @@ export default function DashBoard() {
     const headingStyle = {
         fontSize: '2rem', // Adjust font size
         textAlign: 'center',
-        marginTop: '50%',
+        marginTop: '10%',
       };
 
   return (

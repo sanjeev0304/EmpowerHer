@@ -15,6 +15,10 @@ const Navbar = () => {
     history.push("/DashBoard");
   }
 
+  const handleNavigateToAboutUs = () => {
+    history.push("/AboutUs"); // Navigate to the sign-up page
+  };
+
   const [isDropdownOpen, setIsDropdownOpen] = useState({
     aiTools: false,
     learning: false,
@@ -106,14 +110,15 @@ const Navbar = () => {
     ],
     learning: [
       { label: "Success Stories", link: "/Stories" },
-      { label: "Learning", link: "/Learning" },
+      // { label: "Learning", link: "/Learning" },
       { label: "Government Schemes", link: "/GovernmentSchemes" },
     ],
     tools: [
       { label: "Financial Calculator", link: "/FinancialCalculator" },
-      // { label: "Logo Maker", link: "/LogoMaker" },
+      { label: "Logo Maker", link: "/LogoMaker" },
       { label: "Timeline Planner", link: "/TimelinePlanner" },
     ],
+    
   };
 
   const navbarStyle = {
@@ -259,7 +264,17 @@ const Navbar = () => {
                 <DropdownMenu isOpen={isDropdownOpen[key]} items={items} />
               </li>
             ))}
+           
           </ul>
+          <div style={{ marginLeft: "1rem" }}>
+          <button
+                style={{ ...authButtonStyle }}
+                onClick={handleNavigateToAboutUs}
+              >
+                About Us
+              </button>
+              </div>
+
           <div style={{ marginLeft: "1rem" }}>
             {!isLoggedIn ? (
               <button

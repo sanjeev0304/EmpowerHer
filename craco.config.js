@@ -1,12 +1,12 @@
 module.exports = {
   reactScriptsVersion: "react-scripts",
-  style: {
-    css: {
-      loaderOptions: () => {
-        return {
-          url: false,
-        };
-      },
+  webpack: {
+    configure: (webpackConfig) => {
+      // Disable CSS Minimizer plugin
+      webpackConfig.optimization.minimizer = webpackConfig.optimization.minimizer.filter(
+        (plugin) => plugin.constructor.name !== "CssMinimizerPlugin"
+      );
+      return webpackConfig;
     },
   },
 };
