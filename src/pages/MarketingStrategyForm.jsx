@@ -64,6 +64,7 @@ const MarketingStrategyForm = () => {
     <div className="container1">
       <h1>Marketing Strategy Generator</h1>
       <form onSubmit={handleSubmit}>
+        <h3>Basic Detsils</h3>
         <input
           type="text"
           name="product_service"

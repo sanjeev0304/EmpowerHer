@@ -1,7 +1,7 @@
 
 import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
-
+import { useEffect,useState } from 'react';
 import Navbar8 from '../components/Home/navbar8';
 import Hero17 from '../components/Home/hero17';
 import Features24 from '../components/Home/features24';
@@ -13,8 +13,31 @@ import Footer4 from '../components/Home/footer4';
 import './home.css';
 
 const Home = () => {
+  const [isPopupVisible, setPopupVisible] = useState(false);
+
+  // Show the popup when the component mounts (i.e., when the page loads)
+  useEffect(() => {
+    setPopupVisible(true);
+  }, []);
+
+  // Function to close the popup
+  const closePopup = () => {
+    setPopupVisible(false);
+  };
   return (
     <div className="home-container">
+      {isPopupVisible && (
+        <div className="popup">
+          <div className="popup-content">
+            <h2>Welcome to Empower AI - A Platform that Empowers Women Entrepreneurs</h2>
+            <h3></h3>
+            <p> There is a Get Started button visible after closing of the popup which will help you Understand more about our website!!</p>
+            <button className="button" onClick={closePopup}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
       <Helmet>
         <title>EmpowerHer</title>
         <meta property="og:title" content="Trusty Passionate Narwhal" />

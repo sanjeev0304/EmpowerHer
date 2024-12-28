@@ -56,7 +56,8 @@ const App = () => {
         <Router>
         <Navbar/>
           <Switch>
-            <Route component={Home} exact path="/" />
+          <Route component={Home} exact path="/" />
+            <Route component={Home} exact path="/Home" />
             <Route component={SignUpForm} exact path="/SignUp" />
             <Route component={SuccessStories} exact path="/Stories" />
             <Route component={learning} exact path="/Learning" />
