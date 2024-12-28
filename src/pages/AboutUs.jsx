@@ -1,7 +1,8 @@
 import React from "react";
-
+import Navbar from "../components/Home/navbar8";
 const AboutUs = () => {
   const sectionStyle = {
+    marginTop: "120px",
     padding: "2rem",
     backgroundColor: "#f9f9f9",
     fontFamily: "Arial, sans-serif",
@@ -45,6 +46,8 @@ const AboutUs = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <section style={sectionStyle}>
       <h1 style={headingStyle}>About Us</h1>
       <p style={textStyle}>
@@ -78,6 +81,7 @@ const AboutUs = () => {
         </li>
       </ul>
     </section>
+    </>
   );
 };
 
