@@ -1,8 +1,7 @@
 import React from "react";
 import Cards from "../components/SuccessStories/cards";
 import Navbar from "../components/Home/navbar8";
-import binadevi from "../components/images/binadevi.jpg"
-import img1 from "../components/images/1.jpg"
+
 const womenData = [
   {
     name: "Bina Devi",
@@ -11,7 +10,6 @@ const womenData = [
     tips: "Empowerment through knowledge sharing leads to community development.",
     actionText: "Learn How She Did It",
     link: "https://hutsandlooms.com/blogs/news/success-stories-of-rural-female-entrepreneurs-in-india",
-    img: img1,
   },
   {
     name: "Gunavathy Chandrasekaran",
