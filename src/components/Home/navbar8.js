@@ -110,7 +110,7 @@ const Navbar = () => {
     ],
     learning: [
       { label: "Success Stories", link: "/Stories" },
-      // { label: "Learning", link: "/Learning" },
+      { label: "Learning", link: "/Learning" },
       { label: "Government Schemes", link: "/GovernmentSchemes" },
     ],
     tools: [

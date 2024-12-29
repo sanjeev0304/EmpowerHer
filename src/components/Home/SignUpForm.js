@@ -9,6 +9,7 @@ const AuthForm = () => {
   const history = useHistory();
 
   const API_URL = process.env.REACT_APP_API_URL;
+  console.log(API_URL);
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -27,7 +28,9 @@ const AuthForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page reload
 
+
     try {
+
       const response = await fetch(`${API_URL}/api/users/register`, {
         method: "POST",
         headers: {
@@ -35,6 +38,8 @@ const AuthForm = () => {
         },
         body: JSON.stringify(formData),
       });
+
+      console.log(response + "in try block");
 
       if (response.ok) {
         const data = await response.json();

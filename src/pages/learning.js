@@ -34,7 +34,7 @@ const womenData = [
   
 ];
 
-const govtSchemes = () => {
+const learning = () => {
   return (
     <>
   <Navbar8 />
@@ -59,4 +59,4 @@ const govtSchemes = () => {
   );
 };
 
-export default govtSchemes;
+export default learning;
