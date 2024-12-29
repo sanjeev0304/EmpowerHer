@@ -187,6 +187,7 @@
 
 import React, { useState } from "react";
 import Navbar from "../components/Home/navbar8";
+import { sanitizeFilter } from "mongoose";
 
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -252,9 +253,11 @@ const BusinessPlan = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Product/Service:</label>
+            <h6>What your business will offer, such as a product or a service.</h6>
             <input
               type="text"
               name="product"
+              placeholder="అమ్మడానికి వస్తువు/ఇవ్వాల్సిన సేవ"
               value={formData.product}
               onChange={handleChange}
               required
@@ -262,9 +265,11 @@ const BusinessPlan = () => {
           </div>
           <div className="form-group">
             <label>Initial Investment:</label>
+            <h6>The amount of money needed to start your business</h6>
             <input
               type="text"
               name="investment"
+              placeholder="ప్రారంభ పెట్టుబడి"
               value={formData.investment}
               onChange={handleChange}
               required
@@ -272,19 +277,23 @@ const BusinessPlan = () => {
           </div>
           <div className="form-group">
             <label>Location:</label>
+            <h6>The specific group of customers your business aims to serve.</h6>
             <input
               type="text"
               name="location"
+              placeholder="ప్రదేశం"
               value={formData.location}
               onChange={handleChange}
               required
-            />
+            /> 
           </div>
           <div className="form-group">
             <label>Target Market:</label>
+            <h6>The specific group of customers your business aims to serve</h6>
             <input
               type="text"
               name="target_market"
+              placeholder="టార్గెట్ కస్టమర్లు"
               value={formData.target_market}
               onChange={handleChange}
               required
@@ -292,9 +301,11 @@ const BusinessPlan = () => {
           </div>
           <div className="form-group">
             <label>Hours per Day:</label>
+            <h6>The number of hours your business will operate each day.</h6>
             <input
               type="number"
               name="hours_per_day"
+              placeholder="రోజుకు గంటలు"
               value={formData.hours_per_day}
               onChange={handleChange}
               required
@@ -302,9 +313,11 @@ const BusinessPlan = () => {
           </div>
           <div className="form-group">
             <label>Available Help:</label>
+            <h6>The support or staff available to help run your business</h6>
             <input
               type="text"
               name="help"
+              placeholder="అందుబాటులో ఉన్న సహాయం"
               value={formData.help}
               onChange={handleChange}
               required
@@ -312,9 +325,11 @@ const BusinessPlan = () => {
           </div>
           <div className="form-group">
             <label>Competition Level:</label>
+            <h6>How many other businesses offer similar products or services</h6>
             <input
               type="text"
               name="competition"
+              placeholder="పోటీ స్థాయి"
               value={formData.competition}
               onChange={handleChange}
               required
@@ -322,9 +337,11 @@ const BusinessPlan = () => {
           </div>
           <div className="form-group">
             <label>Location Type:</label>
+            <h6>The kind of location you will have, such as a storefront, office, or online.</h6>
             <input
               type="text"
               name="location_type"
+              placeholder="స్థానం రకం"
               value={formData.location_type}
               onChange={handleChange}
               required
@@ -332,9 +349,11 @@ const BusinessPlan = () => {
           </div>
           <div className="form-group">
             <label>Target Customers:</label>
+            <h6>The group of people you want to sell your product or service to</h6>
             <input
               type="text"
               name="target_customers"
+              placeholder="టార్గెట్ కస్టమర్లు"
               value={formData.target_customers}
               onChange={handleChange}
               required
@@ -342,9 +361,11 @@ const BusinessPlan = () => {
           </div>
           <div className="form-group">
             <label>Starting Money Range:</label>
+            <h6>The amount of money you plan to spend when starting the business.</h6>
             <input
               type="text"
               name="starting_money"
+              placeholder="ప్రారంభ డబ్బు పరిధి"
               value={formData.starting_money}
               onChange={handleChange}
               required
@@ -352,9 +373,11 @@ const BusinessPlan = () => {
           </div>
           <div className="form-group">
             <label>Monthly Expenses:</label>
+            <h6>The regular costs your business will need to cover every month</h6>
             <input
               type="text"
               name="monthly_expenses"
+              placeholder="నెలవారీ ఖర్చులు"
               value={formData.monthly_expenses}
               onChange={handleChange}
               required
